@@ -12,47 +12,71 @@
 </head>
 
 <body>
-  <a href="https://github.com/tomatino2"><img class="icon" src="./img/github.png" alt=""></a>
-  <h1 class="text-center"><strong>BIENVENUE SUR MON PORTFOLIO</strong></h1>
+  <header class="text-center py-3">
+    <a href="https://github.com/tomatino2">
+      <img class="icon" src="./img/github.png" alt="Lien vers mon GitHub">
+    </a>
+    <h1><strong>Bienvenue sur mon Portfolio</strong></h1>
+    <nav>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
 
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
+
+
+
+      </ul>
+
+
+
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+
+
+    <section class="row align-items-center mb-5">
+      <div class="col-lg-6">
         <div class="preview">
-          <iframe src="https://tomtasty.netlify.app/"></iframe>
+          <iframe src="https://tomtasty.netlify.app/" title="Aperçu du site TomTasty"></iframe>
         </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="pasdesus">
-          <h2 class="">Un site de recettes :</h2>
-          <p class="description">
-            Voici un site que j'ai créé. Vous pouvez l'utiliser pour chercher des recettes ou créer les vôtres.
-            Explorez les différentes fonctionnalités et trouvez des idées de plats adaptés à vos ingrédients.
-          </p>
-          <a href="https://tomtasty.netlify.app/">Visitez le site</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row align-items-center">
-      <!-- Deuxième iframe et description -->
-      <div class="col-md-6">
-        <div class="preview">
-          <iframe src="https://tonprojet2.com" width="100%" height="400px"></iframe>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <h2>Un autre projet :</h2>
-        <p>
-          Découvrez ce projet où je travaille sur une application innovante. Ce site est conçu pour démontrer mes
-          compétences en développement web.
+      <div class="col-lg-6">
+        <h2>Un site de recettes :</h2>
+        <p class="description">
+          Voici un site que j'ai créé pour faciliter la recherche de recettes et permettre de créer vos propres plats.
+          Vous pouvez explorer les fonctionnalités, trouver des idées, et cuisiner avec ce que vous avez chez vous.
         </p>
+        <a class="btn btn-primary" href="https://tomtasty.netlify.app/" target="_blank"
+          rel="noopener noreferrer">Visitez le site</a>
       </div>
-    </div>
-  </div>
+    </section>
 
+
+
+    <section class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <div class="preview">
+          <iframe src="https://tonprojet2.com" width="100%" height="400px" title="Aperçu du deuxième projet"></iframe>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h2>Un autre projet :</h2>
+        <p class="description">
+          Découvrez ce projet innovant qui démontre mes compétences en développement web et ma capacité à répondre à des
+          défis techniques.
+        </p>
+        <a class="btn btn-secondary" href="https://tonprojet2.com" target="_blank" rel="noopener noreferrer">Visitez ce
+          projet</a>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="text-center py-4">
+    <p>&copy; 2024 Tom Cunningham - Tous droits réservés</p>
+  </footer>
 </body>
 
 </html>
