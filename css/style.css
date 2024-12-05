@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+
+    font-family: inherit;
     background: linear-gradient(120deg, #8e44ad 0%, #3498db 100%);
     color: white;
     line-height: 1.6;
@@ -26,6 +27,11 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+@font-face {
+    font-family: "Arlinda";
+    src: url(../police/Arlinda.otf);
 }
 
 header {
@@ -78,23 +84,30 @@ a {
 }
 
 .btn-primary {
-    background-color: #4b61bd;
+    font-weight: bold;
+    background-color: black;
     color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #6b7dce;
+    font-weight: bold;
+    color: black;
+    background-color: white;
 }
 
 .btn-secondary {
-    background-color: #bd4b4b;
+    background-color: black;
+    font-weight: bold;
+
     color: white;
     border: none;
 }
 
 .btn-secondary:hover {
-    background-color: #d16c6c;
+    font-weight: bold;
+    color: black;
+    background-color: white;
 }
 
 iframe {
@@ -112,20 +125,25 @@ footer {
     border-top: 2px solid #4b61bd;
     font-size: 14px;
 }
-li{
+
+li {
     list-style: none;
 }
-header a{
+
+header a {
     color: white;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
-a:hover{
+
+a:hover {
     color: gray;
 }
-button{
-    
+
+button {
+    background-color: black;
 
 }
