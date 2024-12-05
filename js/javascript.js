@@ -1,13 +1,32 @@
-const iframes = document.querySelectorAll('iframe');
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-iframes.forEach(iframe => {
-  iframe.addEventListener('mouseenter', () => {
-    iframe.style.transform = 'scale(1.05) translateZ(20px)';
-    iframe.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
-  });
+  const formData = new FormData(this);
+  const submitButton = this.querySelector('button[type="submit"]');
+  const loadingMessage = document.createElement('p');
+  loadingMessage.innerHTML = 'Envoi en cours...';
+  this.appendChild(loadingMessage);
+  submitButton.disabled = true;
 
-  iframe.addEventListener('mouseleave', () => {
-    iframe.style.transform = 'scale(1) translateZ(0)';
-    iframe.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+  fetch(this.action, {
+      method: 'POST',
+      body: formData,
+  })
+  .then(response => {
+      loadingMessage.style.display = 'none';
+      submitButton.disabled = false;
+      if (response.ok) {
+          document.getElementById('messageVer').style.display = 'block';
+          document.getElementById('errorVer').style.display = 'none';
+      } else {
+          document.getElementById('errorVer').style.display = 'block';
+          document.getElementById('messageVer').style.display = 'none';
+      }
+  })
+  .catch(() => {
+      loadingMessage.style.display = 'none';
+      submitButton.disabled = false;
+      document.getElementById('errorVer').style.display = 'block';
+      document.getElementById('messageVer').style.display = 'none';
   });
 });

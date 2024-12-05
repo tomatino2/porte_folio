@@ -44,6 +44,11 @@ header {
     cursor: pointer;
 }
 
+#messageVer {
+    font-weight: bold;
+    color: red;
+}
+
 .container {
     padding: 20px;
 }
@@ -106,4 +111,21 @@ footer {
     margin-top: 20px;
     border-top: 2px solid #4b61bd;
     font-size: 14px;
+}
+li{
+    list-style: none;
+}
+header a{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: gray;
+}
+button{
+    
+
 }
