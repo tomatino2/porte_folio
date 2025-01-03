@@ -5,28 +5,192 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="./img/DALL·E-2024-12-05-14.13.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
     <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corps principal */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #8e44ad, #3498db);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Animation de gradient */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff9800;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #ddd;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        header a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        nav a {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Conteneur de "cards" */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card iframe {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: none;
+        }
+
+        .card-content {
+            padding: 20px;
+            color: #ddd;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .card-content a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #ff9800;
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .card-content a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            font-size: 14px;
+            color: #bbb;
+            border-top: 3px solid #ff9800;
+        }
+
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivité */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .card-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Main content -->
-    <header class="text-center mb-3">
-        <a href="https://github.com/tomatino2">
-            <img class="icon" src="./img/github.png" alt="Lien vers mon GitHub">
-          </a>
-        <h1>Contactez-nous</h1>
+    <header>
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Découvrez mes projets et réalisations</p>
         <nav>
-            <ul>
-              <li><a href="index.html">Accueil</a></li>
-            </ul>
-          </nav>
-
+            <a href="index.html">Accueil</a>
+            <a href="#">Projets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
-
 
     <section class="container mb-5">
         <h2>Formulaire de Contact</h2>
@@ -44,9 +208,7 @@
                 <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
-            <p id="confirmationMessage" class="text-success" style="display: none;">Votre message a été envoyé avec
-                succès. Merci de nous avoir contactés !</p>
-
+            <p id="confirmationMessage" class="text-success" style="display: none;">Votre message a été envoyé avec succès. Merci de nous avoir contactés !</p>
         </form>
     </section>
 
